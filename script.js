@@ -29,6 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
         'videos/1000257115.mp4',
         'videos/1000257116.mp4',
         'videos/1000257117.mp4',
+        'videos/cafe.mp4',
         'videos/cute.mp4'
     ];
     
@@ -122,4 +123,5 @@ document.addEventListener('DOMContentLoaded', function() {
     showSlide(0);
 
 });
+
 
