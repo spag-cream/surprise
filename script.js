@@ -1,11 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // 1. Background Music
     const playButton = document.getElementById('playButton');
     const bgMusic = document.getElementById('bgMusic');
     const playIcon = playButton.querySelector('i');
     const playText = playButton.querySelector('span');
 
-    // Auto-play music when page loads
     const playMusic = () => {
         bgMusic.play().catch(error => {
             console.log('Auto-play was prevented:', error);
@@ -13,7 +11,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     };
 
-    // Toggle play/pause
     playButton.addEventListener('click', () => {
         if (bgMusic.paused) {
             bgMusic.play();
@@ -26,7 +23,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // 2. Video Player
     const videoElement = document.getElementById('memoryVideo');
     const videoSources = [
         'videos/1000256901.mp4',
@@ -46,14 +42,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     videoElement.addEventListener('ended', playNextVideo);
     
-    // Start with the first video
     if (videoSources.length > 0) {
         videoElement.src = videoSources[0];
         videoElement.load();
         videoElement.play().catch(error => console.log('Initial video play error:', error));
     }
 
-    // 3. Image Slideshow
     const slideshow = document.querySelector('.slideshow');
     const images = [
         'images/1000229895.jpg',
@@ -70,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
     ];
 
     let currentSlide = 0;
-    const slideInterval = 5000; // 5 seconds
+    const slideInterval = 5000; 
 
     // Create slides
     images.forEach((image, index) => {
@@ -125,4 +119,5 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initial setup
     playMusic();
     showSlide(0);
+
 });
