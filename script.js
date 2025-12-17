@@ -60,6 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
         'images/1000256930.jpg',
         'images/1000257105.jpg',
         'images/1000257113.jpg',
+        'images/new.jpg',
         'images/try.jpg'
     ];
 
@@ -121,3 +122,4 @@ document.addEventListener('DOMContentLoaded', function() {
     showSlide(0);
 
 });
+
